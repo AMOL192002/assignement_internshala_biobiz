@@ -1,0 +1,850 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+
+#nav-menu-container {
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-menu-container li a {
+    text-decoration: none;
+    color: white;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+
+
+
+
+/* General reset and body style */
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: visible; /* Ensure content is not clipped */
+    height: auto;
+}
+
+/* Main header styling */
+#main-header {
+    background-color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: padding 0.3s, height 0.3s;
+}
+
+/* Container for navbar elements */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+/* Navbar links container */
+#top-menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    height: 70px;
+}
+
+/* Individual navbar items */
+#top-menu li {
+    position: relative;
+    height: 100%;
+}
+
+/* Navbar links style */
+#top-menu li a {
+    text-decoration: none;
+    padding: 20px 15px;
+    color: #333; /* Default color */
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for all links */
+#top-menu li a:hover {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Active page text color */
+#top-menu li a.current-page {
+    color: #6CBEF6 !important; /* Blue color for active link */
+}
+
+/* Prevent hover effect on active link */
+#top-menu li a.current-page:hover {
+    color: #6CBEF6; /* Keep blue color on hover */
+    background-color: transparent; /* No background change */
+}
+
+/* Insights dropdown */
+.menu-item-has-children:hover > .sub-menu {
+    display: block;
+}
+
+/* Submenu styling */
+.sub-menu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sub-menu li a {
+    padding: 10px;
+    color: #333;
+}
+
+/* Remove underline from links */
+#top-menu li a:hover {
+    text-decoration: none;
+}
+
+/* Logo transition on scroll */
+#logo img {
+    transition: height 0.3s, width 0.3s;
+    height: 70px;
+}
+
+/* Shrunk navbar class (when scrolled down) */
+#main-header.shrunk #top-menu {
+    padding: 5px 0 !important;
+    height: 40px !important;
+}
+
+/* Shrunk logo size */
+#main-header.shrunk #logo img {
+    height: 40px !important;
+}
+
+
+
+
+
+
+
+
+
+
+/* Second Section */
+#second-section {
+    background-color: #f4f4f4;
+    padding: 1px 0;
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 550px;
+    position: relative;
+}
+
+.video-placeholder video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* Third Section */
+#third-section {
+    display: flex;
+    background-color: #D6D6D6;
+    padding: 30px;
+    width: 100%; /* Set the desired width */
+    height: 905px; /* Set the desired height */
+    margin: 0 auto; /* Optional: Center the section horizontally */
+    box-sizing: border-box; /* Added box-sizing */
+}
+
+.content-left {
+    width: 60%;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box; /* Added box-sizing */
+}
+
+.bio-text {
+    font-size: 22px;
+    color: #333;
+    line-height: 1.8;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.content-left h2 {
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.main-sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.layer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+}
+
+.layer a {
+    display: flex; /* Use flexbox for proper alignment */
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center-align image and text */
+    justify-content: center; /* Center-align within the link */
+    text-align: center; /* Center text below the image */
+    color: #000080; /* Text color */
+    font-size: 25px; /* Adjust text size */
+    text-decoration: none; /* Remove underline */
+    width: 250px; /* Set a consistent width for alignment */
+    margin: 0 10px; /* Add some spacing between links */
+}
+
+.layer a:hover {
+    cursor: pointer;
+}
+
+.layer img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 25px;
+}
+
+.content-right {
+    width: 40%;
+    box-sizing: border-box; /* Added box-sizing */
+}
+
+.green-box-container {
+    height: 440px;
+    width: 320px;
+    background-color: #1FE089;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box; /* Added box-sizing */
+    margin-left: 60px; /* Adds a small space to move it right */
+}
+
+
+.green-box-header {
+    text-align: center;
+}
+
+.green-box-header h3 {
+    font-size: 24px;
+    color: #12876F;
+    margin-bottom: 20px;
+}
+
+.scrolling-text-container {
+    height: calc(100% - 50px); /* Adjust for heading space */
+    overflow: hidden;
+    position: relative;
+}
+
+.scrolling-text {
+    font-size: 15px;
+    color: #000;
+    position: absolute;
+    animation: scroll-up 30s linear infinite;
+    width: 100%;
+}
+
+@keyframes scroll-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.data-list-Scrolling {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.data-list-Scrolling li {
+    margin-bottom: 8px;
+}
+
+.data-list-Scrolling a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+}
+
+.data-list-Scrolling a:hover {
+    text-decoration: none; /* No underline on hover */
+    cursor: pointer; /* Only pointer effect on hover */
+}
+
+/* View All Button */
+/* .et_pb_button {
+    position: absolute;
+    bottom: -255px;
+    right: 255px;
+    background-color: #12876F;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 2;
+} */
+/* View All Button */
+.et_pb_button {
+    position: absolute;
+    bottom: -380px;
+    right: 230px;
+    background-color: transparent; /* Transparent background */
+    color: #12876F; /* Text color matching the theme */
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #12876F; /* Border visible with the same theme color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+    z-index: 2; /* Ensure button appears above all content */
+    font-weight: bold; /* Optional: Makes the text more prominent */
+    text-align: center;
+}
+
+
+/* Optional hover effect for better UX */
+.et_pb_button:hover {
+    background-color: rgba(18, 135, 111, 0.1); /* Slightly shaded background on hover */
+    color: #12876F; /* Maintain the text color */
+    cursor: pointer;
+}
+
+/* CSS for the 4th Section */
+#other-sections {
+    background-color: #E06100;
+    width: 100%; /* Set width to 964px */
+    height: auto; /* Set height to 321px */
+    padding: 20px;
+    text-align: center;
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0 auto; /* Center the section */
+    box-sizing: border-box; /* Ensure padding doesn't affect total size */
+    margin-top: 2px; /* Ensure space between previous sections */
+    
+}
+
+
+  #other-sections .heading h1 {
+    color: #000000;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+    top: 25px;
+  }
+
+  #other-sections .button-container {
+    display: flex;
+    flex-direction: row; /* Horizontal by default */
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 20px;
+    position: relative;
+    top: 25px;
+  }
+
+  #other-sections .button {
+    background-color: #007FE0;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #other-sections .button:hover {
+    background-color: #005BB5;
+  }
+
+  #other-sections .footer {
+    margin-top: 80px;
+    font-size: 1.2rem;
+  }
+
+  #other-sections .footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  /* #other-sections .footer a:hover {
+    text-decoration: underline;
+  } */
+
+ /* **************************** last section footer section ********************** */
+  .footer {
+    color: white;
+    text-align: center; /* Optional: To center the text */
+    background-color: #E06100; /* Optional: Add a background color if needed */
+    padding: 2px; /* Optional: Add padding for spacing */
+    font-size: 1.2rem; /* Adjust font size */
+    position: relative; /* Ensure footer is placed after content */
+    width: 100%; /* Ensures full width of the page */
+    box-sizing: border-box;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none; /* Remove underline */
+}
+
+.footer a:hover {
+    color: #cccccc; /* Optional: Slightly change color on hover */
+}
+
+.footer-last {
+    background-color: #FFFFFF; /* White background */
+    color: black; /* White text */
+    text-align: center; /* Center align the text */
+    padding: 2px 0; /* Add spacing */
+    font-size: 17px; /* Optional: Set font size */
+    font-weight: bold; /* Make text bold */
+    width: 100%; /* Full width of the page */
+    box-sizing: border-box;
+
+}
+
+.footer-last a {
+    color: white; /* Make links white */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make text bold */
+}
+
+.footer-last a:hover {
+    color: #cccccc; /* Optional: Slightly change color on hover */
+}
+
+
+
+
+
+
+
+
+/* Social Media Container Styles */
+.social-icons-container {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduce space between icons */
+    padding: 5px;
+    z-index: 999;
+}
+
+.social-icons-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Icon color */
+    font-size: 20px; /* Reduced icon size */
+    width: 40px; /* Reduced circle size */
+    height: 40px; /* Reduced circle size */
+    background-color: #0077b5; /* Default blue background */
+    border-radius: 50%; /* Circular icons */
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-icons-container a:hover {
+    color: #fff; /* Keep icon color white on hover */
+    background-color: #005582; /* Darker shade on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+/* Media Query for Smaller Screens */
+/* Hide the navigation menu by default on mobile */
+@media screen and (min-width: 200px) and (max-width: 1265px) {
+    #nav-menu-container.collapsed {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on small screens */
+    }
+   
+
+    .social-icons-container{
+        display: none; /* Hidden by default */
+    }
+
+    #nav-menu-container.expanded {
+        display: block; /* Displayed when expanded */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    #top-menu {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    #top-menu li {
+        width: 100%;
+    }
+
+    #top-menu li a {
+        padding: 10px 15px;
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid #f4f4f4;
+    }
+
+    /* Hamburger icon styles */
+    #hamburger-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        width: 30px;
+        height: 25px;
+    }
+
+    #hamburger-icon span {
+        display: block;
+        height: 4px;
+        background-color: #333;
+        border-radius: 5px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Hamburger icon animation */
+    #hamburger-icon.expanded span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #hamburger-icon.expanded span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hamburger-icon.expanded span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .video-placeholder {
+        height: 300px; /* Reduced height for smaller screens */
+    }
+     /* Adjust the section's width and padding for smaller screens */
+     #third-section {
+        flex-direction: column;
+        padding: 15px;
+        height: 2050px;
+    
+    }
+
+    .content-left, .content-right {
+        width: 100%; /* Make both sections stack on smaller screens */
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .layer {
+        flex-direction: column; /* Stack the layers vertically on small screens */
+        margin-bottom: 30px; /* Adjust spacing */
+    }
+
+    .layer a {
+        width: 100%; /* Make links full width on mobile */
+        margin: 10px 0; /* Add margin for spacing */
+    }
+
+    .green-box-container {
+        width: 100%; /* Full width for green box */
+        margin-left: 0; /* Remove the left margin */
+    }
+  
+        .et_pb_button {
+            position: relative;
+            bottom: -21px;
+            right: -307px;
+            background-color: transparent;
+            color: #12876F;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #12876F;
+            border-radius: 5px;
+            font-size: 16px;
+            z-index: 2;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        
+    
+    #other-sections {
+        height: auto; /* Allow section to expand with content */
+        padding: 10px;
+        flex-direction: column; /* Stack elements vertically */
+        margin-top: 20px; /* Add some spacing */
+      }
+    
+      #other-sections .heading h1 {
+        font-size: 1.5rem; /* Reduce font size */
+        padding: 10px;
+      }
+    
+      #other-sections .button-container {
+        gap: 20px; /* More space between buttons */
+        width: 100%; /* Full width container for buttons */
+      }
+    
+      #other-sections .button {
+        font-size: 0.9rem; /* Decrease font size */
+        padding: 8px 15px; /* Decrease padding */
+        width: 90%; /* Increase button width */
+      }
+    
+      .footer {
+        font-size: 1rem; /* Decrease font size */
+        padding: 10px 0; /* Add some padding for spacing */
+      }
+    
+      .footer-last {
+        font-size: 14px; /* Decrease font size */
+        padding: 5px 0; /* Add padding for spacing */
+      }
+      .footer-last a {
+        font-size: 14px; /* Adjust link font size for better readability */
+     }
+      .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Add spacing between buttons */
+    }
+   
+
+}
+
+
+/* Hide the navigation menu by default on mobile */
+@media screen and (max-width: 480px) {
+    #nav-menu-container {
+        display: none; /* Hidden by default on smaller screens */
+        flex-direction: column;
+        background-color: #444;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    #nav-menu-container.collapsed {
+        display: none; /* Hidden by default */
+    }
+
+    #nav-menu-container.expanded {
+        display: block; /* Displayed when expanded */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    #top-menu {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    #top-menu li {
+        width: 100%;
+    }
+
+    #top-menu li a {
+        padding: 10px 15px;
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid #f4f4f4;
+    }
+
+    /* Hamburger icon styles */
+    .hamburger {
+        display: flex; /* Display hamburger menu on small screens */
+    }
+    #hamburger-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        width: 30px;
+        height: 25px;
+    }
+
+    #hamburger-icon span {
+        display: block;
+        height: 4px;
+        background-color: #333;
+        border-radius: 5px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Hamburger icon animation */
+    #hamburger-icon.expanded span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #hamburger-icon.expanded span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hamburger-icon.expanded span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .video-placeholder {
+        height: 300px; /* Reduced height for smaller screens */
+    }
+    /* Further adjustments for very small screens */
+    .bio-text {
+        font-size: 18px; /* Smaller text for better readability */
+    }
+
+    .green-box-header h3 {
+        font-size: 18px; /* Smaller text for the header */
+    }
+
+    .data-list-Scrolling li {
+        font-size: 14px; /* Reduce font size for list items */
+    }
+
+    .et_pb_button {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        width: 100%; /* Full width button */
+        padding: 15px 0; /* Larger padding for easy click */
+    }
+    #other-sections {
+        height: auto;
+        flex-direction: column; /* Stack elements vertically */
+        margin-top: 20px; /* Add some spacing */
+      }
+    
+      .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Add spacing between buttons */
+      }
+    
+      .footer {
+        font-size: 0.9rem; /* Even smaller font size */
+        padding: 8px 0; /* Reduce padding */
+      }
+    #other-sections .button {
+        font-size: 0.8rem; /* Further decrease font size */
+        padding: 6px 12px; /* Further decrease padding */
+        width: 90%; /* Full width buttons */
+      }
+      #other-sections .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Reduced gap between buttons */
+        width: 100%; /* Full width container for buttons */
+    }
+    
+      .footer {
+        font-size: 0.9rem; /* Even smaller font size */
+        padding: 8px 0; /* Reduce padding */
+      }
+    
+      .footer-last {
+        font-size: 12px; /* Smaller font size */
+        padding: 3px 0; /* Reduce padding */
+      }
+}
+/* ****************************************************** */
+
+#nav-menu-container ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#nav-menu-container li {
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+#nav-menu-container li a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+#nav-menu-container.expanded {
+    display: block;  /* Ensure it is displayed correctly */
+}
+
+#nav-menu-container.collapsed {
+    display: none;
+}
